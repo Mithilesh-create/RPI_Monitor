@@ -10,7 +10,7 @@ function TableDisplay(volts) {
 
                             <tr>
                                 <td>{i}</td>
-                                <td>Mark</td>
+                                <td>{e.Time}</td>
                                 <td>{e.Voltage}</td>
                             </tr>
                         ))
