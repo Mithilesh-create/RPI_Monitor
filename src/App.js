@@ -67,7 +67,7 @@ function App() {
               </Container>
             </Container>
             :
-            <p>Loading...</p>
+            <p>No Data</p>
         }
 
       </div>
