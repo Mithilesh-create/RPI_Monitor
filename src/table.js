@@ -6,18 +6,18 @@ function TableDisplay(volts) {
             <Table striped bordered hover>
                 <tbody className='child'>
                     {
-                        volts?.data.map((e, i) => (
-
-                            <tr>
-                                <td>{i}</td>
-                                <td>{e.Time}</td>
-                                <td>{e.Voltage}</td>
+                        volts?.data.map((e, i) => {
+                            var arr = e.Time.split(" ");
+                            var timeround = arr[1].split(".")
+                            return <tr key={i}>
+                                <td className='col-md-2'>{arr[0]}</td>
+                                <td className='col-md-2'>{timeround[0]}</td>
+                                <td className='col-md-2'>{e.Voltage}</td>
                             </tr>
-                        ))
+
+                        }
+                        )
                     }
-
-
-
                 </tbody>
             </Table>
         </>
