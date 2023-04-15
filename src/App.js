@@ -41,7 +41,7 @@ function App() {
           <h1>Current Voltage</h1>
           <h1 className='text-success mainVoltage'>
             {
-              Currentvoltage?.Voltage ? Currentvoltage?.Voltage : 3.27
+              Currentvoltage?.Voltage ? Currentvoltage?.Voltage : 0
             }
             {" "}
             v
