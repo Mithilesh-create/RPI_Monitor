@@ -7,6 +7,7 @@ import { Container, Table } from 'react-bootstrap';
 import { useGeolocated } from "react-geolocated";
 import ForecastTable from './forecastTable';
 import ParamTable from './parametertables';
+import Chart from './Chart';
 function App() {
   const [Currentvoltage, setCurrentvoltage] = useState();
   const [volts, setHistory] = useState();
@@ -162,6 +163,31 @@ function App() {
           :
           <p>Forecast Data unavailable !!!!</p>
       }
+      <Container>
+        <div className='chartval'>
+          <Chart data={datavals} tag="Solar" name="Solar Radiation Chart" color="yellow" />
+        </div>
+      </Container>
+
+      <br></br>
+      <Container>
+        <div className='chartval'>
+
+          <Chart data={datavals} tag="Wind" name="Wind Speed Chart" color="red" />
+        </div>
+      </Container>
+      <br></br>
+
+      <Container>
+        <div className='chartval'>
+          <Chart data={datavals} tag="Rain" name="Rain Fall Chart" color="dodgerblue" />
+        </div>
+      </Container>
+      <br></br>
+      <br></br>
+
+
+
 
 
     </>
